@@ -66,9 +66,7 @@ def main():
         st.write(f"登校：{st.session_state.start_time}")
         st.write(f"帰宅：{st.session_state.end_time}")
         st.write("今日の研究内容")
-        with open("log/state.txt", "r") as f:
-            line = f.readline()
-            st.write(line.split(" ")[3].strip())
+        st.write(st.session_state.report)
     
 
 if __name__ == "__main__":
